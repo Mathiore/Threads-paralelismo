@@ -1,0 +1,1 @@
+Os principais arquivos são MatrizSingle e MatrizMulti, o algoritmo TesteSingle por enquanto é apenas um algoritmo single thread que gera as matrizes de forma aleatória e permite que altere o tamanho da matriz mais rapidamente.
