@@ -13,14 +13,14 @@ struct ThreadArgs {
     vector<int>* arr;
 };
 
-// Função para trocar dois elementos em um vetor
+// FunÃ§Ã£o para trocar dois elementos em um vetor
 void swap(vector<int>& arr, int i, int j) {
     int temp = arr[i];
     arr[i] = arr[j];
     arr[j] = temp;
 }
 
-// Função executada por cada thread
+// FunÃ§Ã£o executada por cada thread
 void* bubbleSort(void* arg) {
     ThreadArgs* args = static_cast<ThreadArgs*>(arg);
     vector<int>& arr = *(args->arr);
@@ -46,16 +46,9 @@ int main() {
 
     vector<int> arr(n);
 
-    // Preenche o vetor com números aleatórios em ordem decrescente
+    // Preenche o vetor com nÃºmeros aleatÃ³rios em ordem decrescente
     for (int i = 0; i < n; i++) {
         arr[i] = n - i;
-    }
-
-    // Embaralha os elementos do vetor
-    srand(time(NULL));
-    for (int i = n - 1; i > 0; i--) {
-        int j = rand() % (i + 1);
-        swap(arr, i, j);
     }
 
     pthread_t thread;
