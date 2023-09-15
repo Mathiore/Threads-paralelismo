@@ -58,13 +58,12 @@ int main() {
     pthread_create(&thread, NULL, bubbleSort, &args);
 
     pthread_join(thread, NULL);
-
-    /*cout << "Vetor ordenado em ordem crescente:" << endl;
+    timedif = ( ((double) clock()) / CLOCKS_PER_SEC) - time1;
+    cout << "Vetor ordenado em ordem crescente:" << endl;
     for (int i = 0; i < n; i++) {
         cout << arr[i] << " ";
     }
-    cout << endl;*/
-    timedif = ( ((double) clock()) / CLOCKS_PER_SEC) - time1;
+    cout << endl;
     printf("\nTempo executado: %f segundos\n", timedif);
 
     return 0;
